@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "OpenHub",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
@@ -11,30 +11,44 @@
     "light": "#81D7F7",
     "dark": "#004E7A"
   },
-  "topbarLinks": [
-    {
-      "name": "Documentation",
-      "url": "https://mintlify.com/docs"
-    }
-  ],
-  "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
-  },
   "tabs": [
     {
-      "name": "API Reference",
+      "name": "文档",
+      "url": "documents"
+    },
+    {
+      "name": "Api",
       "url": "api-reference"
     }
   ],
+  "primaryTab": {
+    "name": "首页"
+  },
+  "versions": ["v2", "v1"],
   "navigation": [
     {
-      "group": "Get Started",
-      "pages": ["introduction", "quickstart", "development"]
+      "version": "v2",
+      "group": "基础主题",
+      "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
     },
     {
-      "group": "Essentials",
-      "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
+      "version": "v1",
+      "group": "v1主题",
+      "pages": ["essentials/markdown", "essentials/code"]
+    },
+    {
+      "group": "堆栈",
+      "pages": ["base/markdown",{
+        "group": "智能合约",
+        "pages": ["base/code", {
+          "group": "合约库",
+          "pages": ["base/images", "base/settings", "base/navigation"]
+        }]
+      }]
+    },
+    {
+      "group": "文档站",
+      "pages": ["documents/authentication"]
     },
     {
       "group": "API Documentation",
